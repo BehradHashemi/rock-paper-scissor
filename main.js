@@ -1,3 +1,4 @@
+// Create Variables
 let userScore = 0;
 let aiScore = 0;
 const chooses = ["rock", "paper", "scissors"];
@@ -11,7 +12,9 @@ const btn = document.querySelector("button");
 
 btn.addEventListener("click", score)
 
+// Add function for submit score
 function score() {
+    
     // computer choice
     const randomNumber = Math.floor(Math.random() * 3);
     const computerChoice = chooses[randomNumber];
@@ -47,7 +50,8 @@ function score() {
             aiScore++;
         }
     }
-    
+
+    // Show results Score
     document.getElementById("UserScore").innerHTML = `User Score : ${userScore}`;
     document.getElementById("AIScore").innerHTML = `AI Score : ${aiScore}`;
 }
